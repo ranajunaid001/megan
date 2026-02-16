@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>For Megan Pearson — Rana Junaid | Product Manager</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Inter',sans-serif;background:#f5f5f7;color:#1d1d1f;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;cursor:pointer;color:inherit}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:1000;height:44px;display:flex;align-items:center;justify-content:center;gap:28px;padding:0 24px;background:rgba(251,251,253,.92);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,.06)}
+.nav a{color:#1d1d1f;font-size:12px;font-weight:400;opacity:.8;transition:opacity .2s}
+.nav a:hover{opacity:1}
+.nav .logo svg{width:18px;height:22px;fill:#1d1d1f;opacity:.8}
+.nav .logo:hover svg{opacity:1}
+
+/* BUTTONS */
+.btn-b{background:#2997ff;color:#fff;padding:11px 24px;border-radius:100px;font-size:17px;font-weight:400;transition:background .2s;display:inline-block}
+.btn-b:hover{background:#0077ed}
+.btn-o{border:2px solid #2997ff;color:#2997ff;padding:9px 24px;border-radius:100px;font-size:17px;font-weight:400;transition:all .2s;display:inline-block}
+.btn-o:hover{background:#2997ff;color:#fff}
+.btn-bw{background:#2997ff;color:#fff;padding:11px 24px;border-radius:100px;font-size:17px;font-weight:400;transition:background .2s;display:inline-block}
+.btn-bw:hover{background:#0077ed}
+.btn-ow{border:2px solid rgba(255,255,255,.4);color:#fff;padding:9px 24px;border-radius:100px;font-size:17px;font-weight:400;transition:all .2s;display:inline-block}
+.btn-ow:hover{border-color:#fff}
+.btns{display:flex;gap:14px;justify-content:center;margin-top:20px}
+
+/* HERO — full width white */
+.hero{background:#fff;text-align:center;padding:76px 24px 0;overflow:hidden}
+.hero h1{font-size:88px;font-weight:700;letter-spacing:-.045em;line-height:1}
+.hero .sub{font-size:26px;font-weight:400;color:#1d1d1f;margin-top:10px}
+.hero .vis{max-width:700px;margin:40px auto 0;position:relative;height:240px}
+.hero .vis .card{background:#fff;border-radius:20px;box-shadow:0 4px 30px rgba(0,0,0,.07);padding:20px 24px;position:absolute;text-align:center;transition:transform .3s}
+.hero .vis .card:hover{transform:translateY(-4px) !important}
+.hero .vis .card .num{font-size:28px;font-weight:700;letter-spacing:-.03em;line-height:1;margin-bottom:2px}
+.hero .vis .card .lbl{font-size:13px;color:#6e6e73;font-weight:500}
+.hero .vis .orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.15}
+
+/* TILES */
+.tiles{max-width:1440px;margin:12px auto 0;padding:0 12px}
+.tile-full{border-radius:20px;text-align:center;padding:68px 24px 0;margin-bottom:12px;overflow:hidden;position:relative;min-height:520px;display:flex;flex-direction:column;align-items:center}
+.tile-full h2{font-size:52px;font-weight:700;letter-spacing:-.035em;line-height:1.06}
+.tile-full .sub{font-size:22px;font-weight:400;margin-top:8px;line-height:1.4}
+.tile-full .pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:20px;max-width:600px}
+.tile-full .pill{padding:6px 14px;border-radius:100px;font-size:13px;font-weight:500}
+.tile-full .visual{flex:1;display:flex;align-items:flex-end;justify-content:center;margin-top:32px;width:100%;position:relative}
+
+/* 2-col grid */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.tile-half{border-radius:20px;text-align:center;padding:52px 24px 0;overflow:hidden;position:relative;min-height:500px;display:flex;flex-direction:column;align-items:center}
+.tile-half h2{font-size:44px;font-weight:700;letter-spacing:-.035em;line-height:1.06}
+.tile-half .sub{font-size:19px;font-weight:400;margin-top:6px;line-height:1.4;max-width:420px}
+.tile-half .pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:16px;max-width:420px}
+.tile-half .pill{padding:5px 12px;border-radius:100px;font-size:12px;font-weight:500}
+.tile-half .visual{flex:1;display:flex;align-items:flex-end;justify-content:center;margin-top:24px;width:100%;position:relative}
+
+/* Color schemes */
+.bg-white{background:#fff;color:#1d1d1f}
+.bg-white .sub{color:#6e6e73}
+.bg-white .pill{background:rgba(0,0,0,.05);color:#1d1d1f}
+.bg-blue{background:#d2e6f7;color:#1d1d1f}
+.bg-blue .sub{color:#1d1d1f}
+.bg-blue .pill{background:rgba(0,0,0,.06);color:#1d1d1f}
+.bg-dark{background:#1d1d1f;color:#f5f5f7}
+.bg-dark .sub{color:#a1a1a6}
+.bg-dark .pill{background:rgba(255,255,255,.1);color:#f5f5f7}
+.bg-gray{background:#f5f5f7;color:#1d1d1f}
+.bg-gray .sub{color:#6e6e73}
+.bg-gray .pill{background:rgba(0,0,0,.05);color:#1d1d1f}
+.bg-warm{background:#faf0e4;color:#1d1d1f}
+.bg-warm .sub{color:#6e6e73}
+.bg-warm .pill{background:rgba(0,0,0,.05);color:#1d1d1f}
+.bg-mint{background:#dff5ec;color:#1d1d1f}
+.bg-mint .sub{color:#1d1d1f}
+.bg-mint .pill{background:rgba(0,0,0,.06);color:#1d1d1f}
+
+/* Stat bars inside tiles */
+.stat-bars{display:flex;gap:24px;justify-content:center;margin-top:28px;flex-wrap:wrap}
+.stat-bar{text-align:center}
+.stat-bar .n{font-size:48px;font-weight:700;letter-spacing:-.04em;line-height:1}
+.stat-bar .l{font-size:14px;margin-top:4px;font-weight:500}
+.bg-dark .stat-bar .l{color:#a1a1a6}
+
+/* Footer */
+.footer{max-width:980px;margin:24px auto 0;padding:16px 24px 24px;border-top:1px solid #d2d2d7}
+.footer-links{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;padding:10px 0;font-size:12px}
+.footer-links a{color:#6e6e73;transition:color .2s}
+.footer-links a:hover{color:#1d1d1f}
+.footer-copy{text-align:center;font-size:12px;color:#86868b;padding:6px 0}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.fi{opacity:0;transform:translateY(30px);animation:fadeUp .7s ease .1s forwards}
+.fi2{opacity:0;transform:translateY(30px);animation:fadeUp .7s ease .25s forwards}
+.fi3{opacity:0;transform:translateY(30px);animation:fadeUp .7s ease .4s forwards}
+
+@media(max-width:768px){
+  .nav{gap:14px;overflow-x:auto;justify-content:flex-start;padding:0 12px}
+  .hero h1{font-size:52px}
+  .hero .sub{font-size:20px}
+  .hero .vis{height:160px}
+  .hero .vis .card{padding:14px 16px}
+  .hero .vis .card .num{font-size:20px}
+  .grid2{grid-template-columns:1fr}
+  .tile-full h2{font-size:36px}
+  .tile-half h2{font-size:32px}
+  .tile-full,.tile-half{min-height:400px}
+  .stat-bar .n{font-size:36px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="https://ranajunaid.com/" target="_blank" class="logo"><svg viewBox="0 0 17 21"><path d="M15.5 10.6c0-2.1 1.2-3.3 2.5-4.3-1-1.4-2.5-2.2-4.3-2.2-1.8 0-3 1-4 1s-2.3-1-3.8-1C3.3 4.1.5 6.4.5 10.8c0 2.7 1 5.5 2.3 7.3C4 19.8 5 20.9 6.3 20.9c1.2 0 1.7-.8 3.3-.8s2 .8 3.4.8c1.3 0 2.2-1 3.3-2.7.7-1 1.3-2.3 1.3-2.3-2.5-1-3.1-4.7-2.1-5.3zM12.3.4c.8-1 1.4-2.4 1.2-3.8-1.2.1-2.7.8-3.5 1.9-.8.9-1.5 2.3-1.2 3.7 1.3.1 2.7-.7 3.5-1.8z" transform="translate(-0.5, 3.5)" fill="currentColor"/></svg></a>
+  <a href="https://ranajunaid.com/" target="_blank">Agentic AI</a>
+  <a href="https://ranajunaid.com/" target="_blank">GenAI</a>
+  <a href="https://ranajunaid.com/" target="_blank">Agent Assist</a>
+  <a href="https://ranajunaid.com/" target="_blank">Strategy</a>
+  <a href="https://ranajunaid.com/" target="_blank">Impact</a>
+  <a href="https://calendly.com/ranaajunaid01/let-s-talk-product" target="_blank" style="opacity:1">Let's Talk</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1 class="fi">Megan Pearson.</h1>
+  <p class="sub fi2">Meet your next Product Manager.</p>
+  <div class="btns fi3">
+    <a href="https://ranajunaid.com/" target="_blank" class="btn-b">Learn more</a>
+    <a href="https://calendly.com/ranaajunaid01/let-s-talk-product" target="_blank" class="btn-o">Schedule a call</a>
+  </div>
+  <div class="vis fi3">
+    <div class="orb" style="width:300px;height:300px;background:#2997ff;left:5%;top:-20px"></div>
+    <div class="orb" style="width:250px;height:250px;background:#a855f7;right:10%;top:0"></div>
+    <div class="orb" style="width:200px;height:200px;background:#ff6b9d;left:30%;bottom:-40px"></div>
+    <div class="card" style="left:8%;top:30px;transform:rotate(-5deg)">
+      <div class="num" style="color:#2997ff">90K+</div>
+      <div class="lbl">Agentic AI Users</div>
+    </div>
+    <div class="card" style="left:50%;top:10px;transform:translateX(-50%)">
+      <div class="num" style="color:#1d1d1f">$42M+</div>
+      <div class="lbl">AI Products Revenue</div>
+    </div>
+    <div class="card" style="right:8%;top:40px;transform:rotate(4deg)">
+      <div class="num" style="color:#a855f7">500K+</div>
+      <div class="lbl">Agent Assist Workflows</div>
+    </div>
+  </div>
+</section>
+
+<div class="tiles">
+
+<!-- FULL WIDTH — Agentic AI (like iPhone hero) -->
+<a href="https://ranajunaid.com/" target="_blank" class="tile-full bg-white" style="cursor:pointer">
+  <h2>Agentic AI</h2>
+  <p class="sub">Scaled an agentic AI platform to 20K+ users.<br>From idea to production in 4–6 weeks.</p>
+  <div class="btns">
+    <span class="btn-b">See my work</span>
+    <span class="btn-o">Case studies</span>
+  </div>
+  <div class="pills">
+    <span class="pill">Multi-Agent Systems</span>
+    <span class="pill">Tool Calling</span>
+    <span class="pill">LangChain</span>
+    <span class="pill">AutoGen</span>
+    <span class="pill">Agent Evaluation</span>
+    <span class="pill">GPT-4o</span>
+    <span class="pill">Claude 3</span>
+  </div>
+</a>
+
+<!-- FULL WIDTH — GenAI (like iPad Air on blue) -->
+<a href="https://ranajunaid.com/" target="_blank" class="tile-full bg-blue" style="cursor:pointer;min-height:440px">
+  <h2>Generative AI</h2>
+  <p class="sub">Enterprise AI assistant with LLMs and RAG.<br>Quality up 25%. Rework down 20%.</p>
+  <div class="btns">
+    <span class="btn-b">Learn more</span>
+    <span class="btn-o">Portfolio</span>
+  </div>
+  <div class="pills">
+    <span class="pill">RAG Pipelines</span>
+    <span class="pill">LLM Integration</span>
+    <span class="pill">Prompt Engineering</span>
+    <span class="pill">AI Automation</span>
+    <span class="pill">API Design</span>
+  </div>
+</a>
+
+<!-- FULL WIDTH — Watch-style, white bg -->
+<a href="https://ranajunaid.com/" target="_blank" class="tile-full bg-white" style="cursor:pointer;min-height:440px">
+  <h2>Agent Assist</h2>
+  <p class="sub">Real-time in-flow guidance for enterprise teams.<br>6K+ users. 65% weekly active. 3× growth.</p>
+  <div class="btns">
+    <span class="btn-b">Learn more</span>
+    <span class="btn-o">See results</span>
+  </div>
+  <div class="pills">
+    <span class="pill">Real-Time AI</span>
+    <span class="pill">Decision Support</span>
+    <span class="pill">North America & EMEA</span>
+    <span class="pill">Usage Analytics</span>
+  </div>
+</a>
+
+<!-- 2-COL GRID — MacBook/iPad style -->
+<div class="grid2">
+  <a href="https://ranajunaid.com/" target="_blank" class="tile-half bg-dark" style="cursor:pointer">
+    <h2 style="color:#f5f5f7">Product Strategy</h2>
+    <p class="sub">0→1→Millions. +25% engagement.<br>+15% subscriber retention.</p>
+    <div class="btns">
+      <span class="btn-bw">Learn more</span>
+      <span class="btn-ow">Explore</span>
+    </div>
+    <div class="pills">
+      <span class="pill">Roadmapping</span>
+      <span class="pill">GTM Strategy</span>
+      <span class="pill">Cross-Functional</span>
+      <span class="pill">Data-Driven</span>
+    </div>
+  </a>
+  <a href="https://ranajunaid.com/" target="_blank" class="tile-half bg-dark" style="cursor:pointer">
+    <h2 style="color:#f5f5f7">Enterprise AI</h2>
+    <p class="sub">AI-powered CX across healthcare, finance, and telecom. 8K+ agents.</p>
+    <div class="btns">
+      <span class="btn-bw">Learn more</span>
+      <span class="btn-ow">Read more</span>
+    </div>
+    <div class="pills">
+      <span class="pill">Healthcare</span>
+      <span class="pill">FinTech</span>
+      <span class="pill">Telecom</span>
+      <span class="pill">$18M+ Impact</span>
+    </div>
+  </a>
+</div>
+
+<!-- 2-COL GRID — Watch Ultra / AirPods style -->
+<div class="grid2">
+  <a href="https://ranajunaid.com/" target="_blank" class="tile-half bg-warm" style="cursor:pointer;min-height:400px">
+    <h2>AI Workflows</h2>
+    <p class="sub">1M+ tasks/month automated.<br>Manual effort cut 20%.</p>
+    <div class="btns">
+      <span class="btn-b">See how</span>
+      <span class="btn-o">Portfolio</span>
+    </div>
+    <div class="pills">
+      <span class="pill">Automation</span>
+      <span class="pill">Decision Flows</span>
+      <span class="pill">Templates</span>
+      <span class="pill">Shared Context</span>
+    </div>
+  </a>
+  <a href="https://ranajunaid.com/" target="_blank" class="tile-half bg-mint" style="cursor:pointer;min-height:400px">
+    <h2>10+ MVPs</h2>
+    <p class="sub">Shipped fast. 5+ in production.<br>2K+ early adopters per launch.</p>
+    <div class="btns">
+      <span class="btn-b">Learn more</span>
+      <span class="btn-o">Case studies</span>
+    </div>
+    <div class="pills">
+      <span class="pill">Rapid Iteration</span>
+      <span class="pill">A/B Testing</span>
+      <span class="pill">20% Retention Lift</span>
+      <span class="pill">50K+ Users</span>
+    </div>
+  </a>
+</div>
+
+<!-- IMPACT — full width dark -->
+<div class="tile-full bg-dark" style="min-height:380px;padding-bottom:60px">
+  <h2 style="color:#f5f5f7">Impact.</h2>
+  <p class="sub">8+ years. Numbers that speak for themselves.</p>
+  <div class="stat-bars">
+    <div class="stat-bar"><div class="n" style="color:#2997ff">$42M+</div><div class="l">Revenue</div></div>
+    <div class="stat-bar"><div class="n" style="color:#a855f7">90K+</div><div class="l">Users</div></div>
+    <div class="stat-bar"><div class="n" style="color:#ff6b9d">200K+</div><div class="l">Scaled to</div></div>
+    <div class="stat-bar"><div class="n" style="color:#30d158">1M+</div><div class="l">Tasks/month</div></div>
+  </div>
+</div>
+
+<!-- CTA — full width white -->
+<div class="tile-full bg-white" style="min-height:340px;padding-bottom:60px">
+  <h2>Let's build what's next.</h2>
+  <p class="sub">Megan Pearson, I'd love to bring 8+ years of shipping AI products to Apple.</p>
+  <div class="btns">
+    <a href="https://ranajunaid.com/" target="_blank" class="btn-b">View my portfolio</a>
+    <a href="https://calendly.com/ranaajunaid01/let-s-talk-product" target="_blank" class="btn-o">Schedule a call</a>
+  </div>
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-links">
+    <a href="https://ranajunaid.com/" target="_blank">Portfolio</a>
+    <a href="https://calendly.com/ranaajunaid01/let-s-talk-product" target="_blank">Schedule Call</a>
+    <a href="https://ranajunaid.com/" target="_blank">LinkedIn</a>
+    <a href="https://ranajunaid.com/" target="_blank">Agentic AI</a>
+    <a href="https://ranajunaid.com/" target="_blank">GenAI</a>
+    <a href="https://ranajunaid.com/" target="_blank">Strategy</a>
+  </div>
+  <div class="footer-copy">Personalized for Megan Pearson at Apple — Not affiliated with Apple Inc. &nbsp;|&nbsp; Rana Junaid 2026</div>
+</footer>
+
+<script>window.addEventListener('scroll',function(){document.querySelector('.nav').style.background=window.scrollY>10?'rgba(251,251,253,.96)':'rgba(251,251,253,.92)'})</script>
+</body>
+</html>
